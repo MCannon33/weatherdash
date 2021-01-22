@@ -18,7 +18,26 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-4">Search</div>
+        <div class="col-4">
+          Search for a city:
+          <div class="form-search">
+            <input type="text" placeholder="Search" id="searchinput" />
+            <button type="button" id="searchbtn" class="btn btn-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
         <div class="col-8">
           <div class="row">
             <div class="col">
@@ -26,14 +45,49 @@
                 <div class="card-body">
                   <h2 class="card-title">Card title</h2>
                   <p class="card-text">Temperature: <span id="temp"></span>F</p>
-                  <p class="card-text">Humidity:</p>
-                  <p class="card-text">Wind Speed:</p>
-                  <p class="card-text">UV Index:</p>
+                  <p class="card-text">Humidity: <span id="humid"></span>%</p>
+                  <p class="card-text">
+                    Wind Speed: <span id="wind"></span>MPH
+                  </p>
+                  <p class="card-text">UV Index: <span id="uv"></span></p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row"><div class="col">Forecast</div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">Forecast</div>
+        <div class="card">
+          <div class="card-body" style="width: 18rem">
+            <h5 class="card-title">Card title 1</h5>
+            <p class="card-text">Temperature: <span id="day1z"></span></p>
+            <p img src="http://openweathermap.org/img/wn/10d@2x.png">
+              Temperature:
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="width: 18rem">
+            <h5 class="card-title">Card title 2</h5>
+            <p class="card-text">Temperature: <span id="day2z"></span></p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body" style="width: 18rem">
+            <h5 class="card-title">Card title 3</h5>
+            <p class="card-text">Temperature: <span id="day3z"></span></p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
       </div>
     </div>
