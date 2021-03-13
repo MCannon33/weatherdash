@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark text-center">
-      <span class="navbar-brand mb-0 h1">Navbar</span>
+      <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
     </nav>
     <div class="container">
       <div class="row">
@@ -36,6 +36,10 @@
                 />
               </svg>
             </button>
+            <!-- <h2 class="card-title">Previous Searches</h2> -->
+            <div class="mt-5" id="prevSearches">
+              <!--Buttons for previous searches here-->
+            </div>
           </div>
         </div>
         <div class="col-8">
@@ -44,32 +48,22 @@
               <div class="card">
                 <div class="card-body">
                   <h2 class="card-title">Card title</h2>
+                  <p class="card-text">Temperature: <span id="city"></span>F</p>
                   <p class="card-text">Temperature: <span id="temp"></span>F</p>
                   <p class="card-text">Humidity: <span id="humid"></span>%</p>
                   <p class="card-text">
                     Wind Speed: <span id="wind"></span>MPH
                   </p>
-                  <p class="card-text">UV Index: <span id="uv"></span></p>
+                  <p class="card-text">UV Index: <span id="uvi"></span></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="forecast-container">
         <div class="col">Forecast</div>
-        <div class="card">
-          <div class="card-body" style="width: 18rem">
-            <h5 class="card-title">Card title 1</h5>
-            <p class="card-text">Temperature: <span id="day1z"></span></p>
-            <p img src="http://openweathermap.org/img/wn/10d@2x.png">
-              Temperature:
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
+        <!-- 
         <div class="card">
           <div class="card-body" style="width: 18rem">
             <h5 class="card-title">Card title 2</h5>
@@ -89,6 +83,24 @@
             </p>
           </div>
         </div>
+        <div class="card">
+          <div class="card-body" style="width: 18rem">
+            <h5 class="card-title">Card title 4</h5>
+            <p class="card-text">Temperature: <span id="day3z"></span></p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="width: 18rem">
+            <h5 class="card-title">Card title 5</h5>
+            <p class="card-text">Temperature: <span id="day3z"></span></p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div> -->
       </div>
     </div>
     <script src="assets/script.js"></script>
