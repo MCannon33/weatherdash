@@ -1,7 +1,8 @@
 document.querySelector("#searchbtn").addEventListener("click", function () {
   var city = document.querySelector("#searchinput").value;
   var forecastContainer = document.getElementById("forecast-container");
-
+  var prevSearches = JSON.parse(localStorage.getItem("city"));
+  prevSearches.push(city);
   var savedLocations = [];
   var preLocations;
   if (!JSON.parse(localStorage.getItem("city"))) {
@@ -62,8 +63,8 @@ document.querySelector("#searchbtn").addEventListener("click", function () {
           for (var i = 0; i < data2.daily.length; i++) {
             const card = `<div class="card bg-primary list-group">
             <div class="card-body span2">
-              <h5 class="card-title">Card title 1</h5>
-              <p class="card-text">Temperature: <span id="day1z">${new Date(
+        
+              <p class="card-text card-title">Date: <span id="day1z">${new Date(
                 data2.daily[i].dt
               )}</span></p>
               <p class="card-text">Temperature: <span id="day1z">${
