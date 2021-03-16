@@ -100,11 +100,12 @@ document.querySelector("#searchbtn").addEventListener("click", function () {
             if (i >= 5) {
               break;
             }
-            const card = `<div class="card bg-primary list-group">
+
+            const card = `<div class="card bg-primary list-group text-white ml-3 mb-3 rounded">
             <div class="card-body span2">
         
               <p class="card-text card-title">Date: <span id="day1z">${new Date(
-                data2.daily[i].dt
+                data2.daily.dt
               )}</span></p>
               <p class="card-text">Temperature: <span id="day1z">${
                 data2.daily[i].temp.day
