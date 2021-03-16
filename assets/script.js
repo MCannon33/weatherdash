@@ -1,8 +1,26 @@
+var searchList = document.getElementById("prevSearches");
+var preLocations;
+if (!JSON.parse(localStorage.getItem("city"))) {
+  preLocations = [];
+} else {
+  preLocations = JSON.parse(localStorage.getItem("city"));
+}
+
+// console.log(preLocations);
+var list = "";
+for (var i = 0; i < preLocations.length; i++) {
+  list += `<li>`;
+  list += preLocations[i];
+  list += `</li>`;
+  console.log(preLocations[i]);
+}
+console.log(list);
+searchList.innerHTML = list;
+
 document.querySelector("#searchbtn").addEventListener("click", function () {
   var city = document.querySelector("#searchinput").value;
   var forecastContainer = document.getElementById("forecast-container");
-  var prevSearches = JSON.parse(localStorage.getItem("city"));
-  prevSearches.push(city);
+  var searchList = document.getElementById("prevSearches");
   var savedLocations = [];
   var preLocations;
   if (!JSON.parse(localStorage.getItem("city"))) {
@@ -10,6 +28,24 @@ document.querySelector("#searchbtn").addEventListener("click", function () {
   } else {
     preLocations = JSON.parse(localStorage.getItem("city"));
   }
+
+  // console.log(preLocations);
+  var list = "";
+  for (var i = 0; i < preLocations.length; i++) {
+    list += `<li>`;
+    list += preLocations[i];
+    list += `</li>`;
+    console.log(preLocations[i]);
+  }
+  console.log(list);
+  searchList.innerHTML = list;
+
+  // var preLocations;
+  // if (!JSON.parse(localStorage.getItem("city"))) {
+  //   preLocations = [];
+  // } else {
+  //   preLocations = JSON.parse(localStorage.getItem("city"));
+  // }
 
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=856d91b9f228e56edd3da6504c19f051`
@@ -61,6 +97,9 @@ document.querySelector("#searchbtn").addEventListener("click", function () {
           console.log(data2.current.uvi);
           document.querySelector("#uvi").textContent = data2.current.uvi;
           for (var i = 0; i < data2.daily.length; i++) {
+            if (i >= 5) {
+              break;
+            }
             const card = `<div class="card bg-primary list-group">
             <div class="card-body span2">
         
