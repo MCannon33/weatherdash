@@ -1,6 +1,6 @@
 # React App 101
 
-**USe the OpenWeatherAPI to retrive your five day forecast.**
+**Use the OpenWeatherAPI to retrive your five day forecast.**
 _Server Side APIs_
 
 ![Budget Tracker Cover](/weather.png)
