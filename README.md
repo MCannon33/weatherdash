@@ -5,5 +5,5 @@ _Server Side APIs_
 
 ![Budget Tracker Cover](/weather.png)
 
-[GitHub](https://github.com/MCannon33/weatherdash)
+[GitHub](https://github.com/MCannon33/weatherdash) ||
 [Live URL](https://warm-depths-48242.herokuapp.com/)
